@@ -415,6 +415,7 @@ def visualize_boxes_and_labels_on_image_array(image,
     """
     # Create a display string (and color) for every box location, group any boxes
     # that correspond to the same location.
+    ls = []
     box_to_display_str_map = collections.defaultdict(list)
     box_to_color_map = collections.defaultdict(str)
     box_to_instance_masks_map = {}
@@ -436,6 +437,7 @@ def visualize_boxes_and_labels_on_image_array(image,
                         class_name = category_index[classes[i]]['name']
                     else:
                         class_name = 'N/A'
+                    ls.append(int(100*scores[i]))
                     display_str = '{}: {}%'.format(
                         class_name,
                         int(100*scores[i]))
@@ -475,7 +477,7 @@ def visualize_boxes_and_labels_on_image_array(image,
                 radius=line_thickness / 2,
                 use_normalized_coordinates=use_normalized_coordinates)
 
-    return image
+    return image, ls
 
 
 def add_cdf_image_summary(values, name):

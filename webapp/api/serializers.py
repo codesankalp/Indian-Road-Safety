@@ -6,7 +6,7 @@ class RoadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Roads
         fields = ['id', 'original_image',
-                  'detected_image', 'longitude', 'latitude']
+                  'detected_image', 'longitude', 'latitude', 'effect_percentage']
 
 
 class PostRoadSerializer(RoadSerializer):

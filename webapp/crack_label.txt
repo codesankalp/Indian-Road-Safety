@@ -1,39 +1,39 @@
 item {
   id: 1
-  name: 'D00'
+  name: 'Wheel Mark Part'
 }
 
 item {
   id: 2
-  name: 'D01'
+  name: 'Construction Joint Part (longitudinal)'
 }
 
 item {
   id: 3
-  name: 'D10'
+  name: 'Equal Interval'
 }
 
 item {
   id: 4
-  name: 'D11'
+  name: 'Construction Joint Part (lateral)'
 }
 
 item {
   id: 5
-  name: 'D20'
+  name: 'Partial / Overall Pavement'
 }
 
 item {
   id: 6
-  name: 'D40'
+  name: 'Rutting / Bump / Pothole / Separation'
 }
 
 item {
   id: 7
-  name: 'D43'
+  name: 'Cross Walk blur'
 }
 
 item {
   id: 8
-  name: 'D44'
+  name: 'White line blur'
 }

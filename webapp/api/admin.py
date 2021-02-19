@@ -8,7 +8,7 @@ from .models import Roads
 class RoadAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
-            'fields': ('original_image', 'detected_image', 'longitude', 'latitude', 'boxes', 'scores', 'classes', 'num')
+            'fields': ('original_image', 'detected_image', 'longitude', 'latitude', 'effect_percentage', 'boxes', 'scores', 'classes', 'num')
         }),
     )
 

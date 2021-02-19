@@ -21,7 +21,7 @@ tf.disable_v2_behavior()
 model_path = settings.BASE_DIR / settings.ML_MODEL
 label_path = settings.BASE_DIR / settings.ML_LABEL
 NUM_CLASSES = 8
-IMAGE_SIZE = (25, 20)
+IMAGE_SIZE = (12, 10)
 
 
 def load_image_into_numpy_array(image):
@@ -81,11 +81,11 @@ def detect(image_path):
                 ],
                 feed_dict={image_tensor: image_np_expanded}
             )
-            print(np.squeeze(boxes),
-                  np.squeeze(classes).astype(np.int32),
-                  np.squeeze(scores), num, category_index, sep="\n")
+            # print(np.squeeze(boxes),
+            #   np.squeeze(classes).astype(np.int32),
+            #   np.squeeze(scores), num, category_index, sep="\n")
             # Visualization of the results of a detection.
-            visualize_boxes_and_labels_on_image_array(
+            _, ls = visualize_boxes_and_labels_on_image_array(
                 image_np,
                 np.squeeze(boxes),
                 np.squeeze(classes).astype(np.int32),
@@ -95,13 +95,14 @@ def detect(image_path):
                 use_normalized_coordinates=True,
                 line_thickness=8
             )
+            avg = sum(ls)/len(ls)
             plt.figure(figsize=IMAGE_SIZE)
             plt.axis('off')
             plt.imshow(image_np)
             pic_IObytes = io.BytesIO()
             img = io.BytesIO()
-            plt.savefig(img, format='jpg')
+            plt.savefig(img, format='png')
             plt.savefig(pic_IObytes,  format='png')
             pic_IObytes.seek(0)
             pic_hash = base64.b64encode(pic_IObytes.read())
-            return (boxes, scores, classes, num, pic_hash, img)
+            return (boxes, scores, classes, num, pic_hash, img, avg)
