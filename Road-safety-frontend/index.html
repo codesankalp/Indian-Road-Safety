@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="Images/favicon.ico"/> 
+    <title>Road-Safety</title>
+</head>
+<body>
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav" id="side_bar">
+      <li class="sidebar-brand" style="font-weight: bold; color:white">
+        <h3>-- Output Window --</h3>
+      </li>
+      <hr>
+      <p style="text-align: center;">Before</p>
+      <img class="image-1" src="Images/road-img.jpg" alt="sample-image-1">
+      <br>
+      <br>
+      <p style="text-align: center;">After</p>
+      <img class="image-1-out image-1" src="Images/road-img.jpg" alt="sample-image-1-out">
+      <div class="container">
+        <form>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="rd_2" name="rd" class="custom-control-input" value="No">
+            <label class="custom-control-label red" for="rd_2">Red</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="rd_1" name="rd" class="custom-control-input" value="Yes">
+            <label class="custom-control-label green" for="rd_1">Green</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" id="rd_3" name="rd" class="custom-control-input" value="No">
+            <label class="custom-control-label yellow" for="rd_3">Yellow</label>
+          </div>
+          <!-- <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Red
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Yellow
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">Green
+          </label> -->
+        </form>
+      
+        <br>
+        <p><strong>Marker Navigations:-</strong> </p>
+      </div>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>
+        <a href="#menu-toggle" class="gradient-menu" id="menu-toggle"></a>
+          &nbsp;Road Condition Analyser&nbsp;<!-- a href="#menu-toggle" class="btn btn-default" >Toggle Sidebar</a -->
+          </h1>
+          <div id="map_canvas"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+</body>
+
+<!-- API KEY FOR GOOGLE MAP = AIzaSyC7zWOpdz7RQb2d4w22UcHSmETW_2hBoUc -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7zWOpdz7RQb2d4w22UcHSmETW_2hBoUc"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="./app.js"></script>
+</html>
