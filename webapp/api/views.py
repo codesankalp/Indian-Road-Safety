@@ -15,6 +15,10 @@ from io import BytesIO
 from rest_framework import status
 
 
+def index(request):
+    return render(request, 'index.html', {})
+
+
 def test(request):
     print(model_path, label_path)
     boxes, scores, classes, num, image_byte, det_img, effect_percentage = detect(
@@ -41,6 +45,7 @@ class RoadViewSet(viewsets.ModelViewSet):
         try:
             data = request.data
             img = request.FILES['original_image']
+            print(data.get('longitude', 0))
             fs = FileSystemStorage()
             filename = fs.save(img.name, img)
             file_url = fs.url(filename)

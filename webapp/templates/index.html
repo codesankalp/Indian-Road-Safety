@@ -1,0 +1,59 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" type="image/png" href="/static/Images/favicon.ico"/> 
+    <title>Road-Safety</title>
+</head>
+<body>
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper" style="overflow-x:hidden;">
+    <ul class="sidebar-nav" id="side_bar">
+      <li class="sidebar-brand" style="font-weight: bold; color:white">
+        <h3 style="text-align: center; margin-right: 15%;">All Roads</h3>
+      </li>
+      <hr>
+      <div id="detail">
+      </div>
+        <div class="container">
+      
+        <br>
+        <p><strong>Roads List:- </strong> </p>
+      </div>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h1>
+        <a href="#menu-toggle" class="gradient-menu" id="menu-toggle"></a>
+          &nbsp;Road Condition Analyser&nbsp;<!-- a href="#menu-toggle" class="btn btn-default" >Toggle Sidebar</a -->
+          </h1>
+          <div id="map_canvas"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+</body>
+
+<!-- API KEY FOR GOOGLE MAP = AIzaSyC7zWOpdz7RQb2d4w22UcHSmETW_2hBoUc -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbpbW83LdxA5HAs32QbSdvnWcEOruSFvM">
+  </script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7zWOpdz7RQb2d4w22UcHSmETW_2hBoUc"></script> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="/static/app.js"></script>
+</html>
